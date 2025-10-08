@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --radius: 16px; }
+* { box-sizing: border-box; }
+a { text-decoration-thickness: .08em; text-underline-offset: 2px; }
