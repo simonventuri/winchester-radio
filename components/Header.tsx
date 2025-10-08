@@ -5,9 +5,9 @@ export function Header() {
         <div className="flex items-center justify-between py-3">
           <a href="/" className="flex items-center gap-3">
             <img 
-              src="/logo.jpg" 
+              src="/logo.png" 
               alt="Winchester Radio Logo" 
-              className="h-8 w-8 rounded-full object-cover grayscale"
+              className="h-14 w-auto object-contain grayscale"
             />
             <span className="text-lg font-semibold tracking-tight">Winchester Radio</span>
           </a>
