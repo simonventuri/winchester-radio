@@ -3,7 +3,7 @@ import { getSchedule } from '@/lib/cms'
 export async function SchedulePreview() {
   const slots = await getSchedule('today')
   return (
-    <section className="border-b border-black/10 bg-white py-12">
+    <section className="border-b border-black/10 py-12">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mb-6 flex items-center justify-between">
           <h2 className="text-2xl font-semibold tracking-tight">Today’s Schedule</h2>

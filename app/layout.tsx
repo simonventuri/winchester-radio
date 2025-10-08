@@ -26,10 +26,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="min-h-screen bg-white text-black antialiased">
-        <Header />
-        {children}
-        <GlobalPlayer />
+      <body 
+        className="min-h-screen text-black antialiased bg-cover bg-center bg-no-repeat bg-fixed grayscale"
+        style={{ backgroundImage: "url('/logo.jpg')" }}
+      >
+        <div className="min-h-screen bg-white/70 backdrop-blur-sm">
+          <Header />
+          {children}
+          <GlobalPlayer />
+        </div>
       </body>
     </html>
   )
