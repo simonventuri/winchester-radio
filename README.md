@@ -1,26 +1,24 @@
-# Winchester Radio – Next.js (Headless) Starter
+# Winchester Radio – Next.js Wireframe Demo
 
-A lean **Next.js 14 + Tailwind** starter wired for **Sanity** headless CMS, with:
+A lean **Next.js 14 + Tailwind** wireframe demo with:
 - Global sticky audio player
 - IA: Listen, Shows & Schedule, Winchester Now, Get Involved, About, Donate
 - Episode cards + schedule preview
 - API route for `now-playing` (proxy/mocker)
 - JSON-LD for Organization, RadioStation, PodcastSeries
+- Mock CMS data for demonstration
 
 ## Quick start
 
 ```bash
-pnpm i   # or npm install / yarn
+npm install
 cp .env.example .env.local
-# Fill SANITY_* and streaming URLs
-pnpm dev
+# Fill streaming URLs if desired
+npm run dev
 ```
 
-### Sanity setup
-1. `npm create sanity@latest -- --create-project "Winchester Radio"` (or use an existing project).
-2. Add project ID & dataset to `.env.local`.
-3. Use `sanity/schema.ts` here as a starting point for Studio.
-4. Optionally, add a webhook to revalidate ISR on publish.
+### Content Management
+Currently uses mock data in `lib/cms.ts`. Ready to be wired up to any headless CMS later.
 
 ### Deploy
 - Vercel recommended. Set env vars in project settings.

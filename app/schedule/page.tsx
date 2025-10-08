@@ -1,16 +1,9 @@
-// Mock data for demo wireframe
-const MOCK_SLOTS = [
-  { time: '06:00 – 09:00', title: 'Wake Up Winchester', presenter: 'Sam & Jo', showSlug: 'wake-up-winchester' },
-  { time: '09:00 – 12:00', title: 'Breakfast in Winchester', presenter: 'Alex Stewart', showSlug: 'breakfast' },
-  { time: '12:00 – 14:00', title: 'Winchester Now (Live)', presenter: 'Team', showSlug: 'winchester-now' },
-  { time: '14:00 – 16:00', title: 'Afternoon Mix', presenter: 'Maya Khan', showSlug: 'afternoon-mix' },
-  { time: '16:00 – 19:00', title: 'Drive', presenter: 'Tom Rivers', showSlug: 'drive' },
-  { time: '19:00 – 22:00', title: 'Evening Sessions', presenter: 'Lisa Chen', showSlug: 'evening-sessions' },
-  { time: '22:00 – 06:00', title: 'Overnight', presenter: 'Automated', showSlug: 'overnight' },
-]
+import { getSchedule } from '@/lib/cms'
 
-export default function SchedulePage() {
-  const slots = MOCK_SLOTS
+export const revalidate = 300
+
+export default async function SchedulePage() {
+  const slots = await getSchedule('today')
   return (
     <main className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
       <h1 className="text-3xl font-semibold tracking-tight">Today’s Schedule</h1>
