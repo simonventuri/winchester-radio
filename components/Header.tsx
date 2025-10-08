@@ -3,7 +3,12 @@ export function Header() {
     <header className="sticky top-0 z-40 w-full border-b border-black/10 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-3">
-          <a href="/" className="flex items-center gap-2">
+          <a href="/" className="flex items-center gap-3">
+            <img 
+              src="/logo.jpg" 
+              alt="Winchester Radio Logo" 
+              className="h-8 w-8 rounded-full object-cover grayscale"
+            />
             <span className="text-lg font-semibold tracking-tight">Winchester Radio</span>
           </a>
           <nav className="hidden items-center gap-6 md:flex">

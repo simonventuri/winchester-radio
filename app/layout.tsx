@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: 'Winchester Radio',
   description: 'Radio for Winchester, from Winchester, by Winchester. 94.7 FM • DAB • Online.',
   metadataBase: new URL('https://winchester.radio'),
+  icons: {
+    icon: '/logo.jpg',
+    apple: '/logo.jpg',
+    shortcut: '/favicon-simple.png',
+  },
   openGraph: {
     title: 'Winchester Radio',
     description: 'Community-powered radio for Winchester & nearby villages.',
