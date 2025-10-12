@@ -1,4 +1,5 @@
 import { getShows } from '@/lib/cms'
+import { PresenterLink } from '@/components/PresenterLink'
 
 export const revalidate = 3600
 
@@ -11,7 +12,13 @@ export default async function ShowsIndex() {
         {shows.map(show => (
           <a key={show.slug} href={`/shows/${show.slug}`} className="group rounded-2xl border p-4 hover:bg-slate-50">
             <p className="text-lg font-medium">{show.title}</p>
-            <p className="text-sm text-black/70">{show.presenter}</p>
+            <p className="text-sm text-black/70">
+              <PresenterLink 
+                presenterSlugs={show.presenterSlugs} 
+                presenterName={show.presenter}
+                insideLink={true}
+              />
+            </p>
             <p className="mt-2 line-clamp-2 text-sm text-black/70">{show.summary}</p>
             <p className="mt-2 text-sm underline">Show details</p>
           </a>

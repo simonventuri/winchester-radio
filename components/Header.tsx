@@ -13,6 +13,7 @@ export function Header() {
           </a>
           <nav className="hidden items-center gap-6 md:flex">
             <a className="hover:underline" href="/schedule">Shows & Schedule</a>
+            <a className="hover:underline" href="/presenters">Presenters</a>
             <a className="hover:underline" href="/winchester-now">Winchester Now</a>
             <a className="hover:underline" href="/get-involved">Get Involved</a>
             <a className="hover:underline" href="/about">About</a>
